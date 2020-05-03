@@ -1,0 +1,36 @@
+body{
+    background-color: #00BFFF;
+    margin: auto 0;
+}
+table{
+    margin-top: 30px;
+    width:80%;
+    margin: auto;
+    margin-top: 20px;
+    border-collapse:collapse;
+    color: #FFFFFF;
+}
+h1{
+    margin-top:20px;
+    color: #FFFFFF;
+}
+.tubuh{
+  height: 100%;
+  width: 70%;
+  background-color: #FF0000;
+  opacity: 0.7;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  text-align:center;
+}
+}
+a:link {
+    background-color: transparent;
+    text-decoration: none;
+}
+a:hover {
+    color: #00FFFF;
+    background-color: transparent;
+    text-decoration: underline;
+  }
