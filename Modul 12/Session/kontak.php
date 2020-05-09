@@ -6,6 +6,8 @@ if( !isset($_SESSION["login"])) {
     exit;
 }
 
+$nama = $_SESSION["username"];
+$type = $_SESSION["role"];
 
 ?>
 
@@ -15,23 +17,23 @@ if( !isset($_SESSION["login"])) {
 	<title>Kontak | Universitas Udayana</title>
 <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<body bgcolor="#add8e6">
+<body bgcolor="#add8e6" <?= ($type == 'admin') ? "style='background-color: #f4a460'" : "style='background-color: #00ffff'"; ?>>
 	<div class="tubuh">
 		<div class="kepala">
 			<div class="logo"><img src="logo.png" width="100%" height="100%"></div>
 			<div class="judul">
 				<font style="font-size: 28px; font-weight: bold;">Universitas Udayana</font><br>
-				<font style="font-size: 16px; font-weight: bold;">Jalan Raya Kampus Unud, Jimbaran,</font><br>
+				<font style="font-size: 16px; font-weight: bold;">Jalan Raya Kampus Unud, Jimbaran, &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="logout.php">Logout</a></font><br>
 				<font style="font-size: 16px; font-weight: bold;">Badung, Bali | (0361) 701954</font>
 			</div>
 		</div>
 		<div id="navbar">
 			<nav>
 				<ul>
-					<li><a href="index.html">Beranda</a></li>
-					<li><a href="tentang.html">Tentang</a></li>
-					<li><a href="profil.html">Profil</a></li>
-					<li><a href="kontak.html">Kontak</a></li>
+					<li><a href="index.php">Beranda</a></li>
+					<li><a href="tentang.php">Tentang</a></li>
+					<li><a href="profil.php">Profil</a></li>
+					<li><a href="kontak.php">Kontak</a></li>
 				</ul>
 			</nav>
 		</div>
@@ -40,14 +42,6 @@ if( !isset($_SESSION["login"])) {
 			<font style="font-size:20px; font-weight:bold;">Kontak</font><br>
             <i>I Kadek Agus Andika Putra / 1708561078 / dexandika19@gmail.com</i>
 		</div>
-
-		<div class="footer">
-        <h2>UNIVERSITAS UDAYANA</h1>
-            <h4>Jl. Raya Kampus UNUD, Bukit Jimbaran, Kuta Selatan, Badung-Bali-803611</h4>
-            <h4>Phone Number: +62 (361) 701954, 704845</h4>
-            <h4>Fax: +62 (361) 701907</h4>
-            <h4>Email: info@unud.ac.id</h4>
-    	</div>
 
 </body>
 </html>

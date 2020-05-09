@@ -71,11 +71,5 @@ $type = $_SESSION["role"];
 		</div>
 	</div>	
 
-	<h2>UNIVERSITAS UDAYANA</h1>
-            <h4>Jl. Raya Kampus UNUD, Bukit Jimbaran, Kuta Selatan, Badung-Bali-803611</h4>
-            <h4>Phone Number: +62 (361) 701954, 704845</h4>
-            <h4>Fax: +62 (361) 701907</h4>
-            <h4>Email: info@unud.ac.id</h4>
-    </div>
 </body>
 </html>
