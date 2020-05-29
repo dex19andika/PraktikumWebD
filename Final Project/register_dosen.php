@@ -1,8 +1,8 @@
 <?php 
 include 'function.php';
 
-if( isset($_SESSION["login"])) {
-    header("Location: mahasiswa.php");
+if( !isset($_SESSION["login"])) {
+    header("Location: login.php");
     exit;
 }
 ?>
@@ -29,12 +29,12 @@ if( isset($_SESSION["login"])) {
 
 <body>
 <div class="container">
-    <div class="card  text-center" id="cardRegis">
+    <div class="card text-center" id="cardRegis1">
         <div class="card-title">
-            <h1 class="card-title">Halaman Registrasi Mahasiswa</h1>
+            <h1 class="card-title">Halaman Registrasi Dosen</h1>
         </div>
         <div class="card-body ">
-            <form id="registrationForm" method="POST" action="function.php?act=register" class="needs-validation" novalidate>
+            <form id="registrationForm" method="POST" action="function.php?act=registerDosen" class="needs-validation" novalidate>
                 <div class="form-row">
                     <div class="col">
                         <label for="nama">Nama Lengkap</label>
@@ -49,13 +49,25 @@ if( isset($_SESSION["login"])) {
                 </div>
                 <div class="form-row">
                     <div class="col">
-                        <label  for="nim">NIM</label>
-                        <input type="text" class="form-control" id="nim" name="nim" placeholder="Masukkan NIM" required>
+                        <label  for="nip">NIP</label>
+                        <input type="text" class="form-control" id="nip" name="nip" placeholder="Masukkan NIP" required>
                         <div class="valid-feedback">
                             Bagus!
                         </div>
                         <div class="invalid-feedback">
-                            NIM tidak boleh kosong
+                            NIP tidak boleh kosong
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col">
+                        <label  for="nidn">NIDN</label>
+                        <input type="text" class="form-control" id="nidn" name="nidn" placeholder="Masukkan NIDN" required>
+                        <div class="valid-feedback">
+                            Bagus!
+                        </div>
+                        <div class="invalid-feedback">
+                            NIP tidak boleh kosong
                         </div>
                     </div>
                 </div>
@@ -105,10 +117,6 @@ if( isset($_SESSION["login"])) {
                     </div>
                 </div>
                 <button type="submit" name="submitButton" id="submitButton" class="registerbtn btn btn-primary">Register</button>
-                <br>
-                <div class="container signin">
-                    <p>Sudah punya akun? <a href="login.php">Log In</a></p>
-                </div>
             </form>
         </div>
     </div>
